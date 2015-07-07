@@ -1,0 +1,159 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+
+/* DBaker: ALERTS
+ * -------------------------- */
+
+// Alert icon:
+.alert > span {
+  position:absolute;
+  top:50%;
+  font-size: 20px;
+  line-height: 0px;
+}
+
+.alert > img {
+  float: left;
+  margin-top: 10px;
+}
+
+
+
+.panel-body-alert {
+  background-color: @white;
+  padding: 10px;
+  margin-left: 30px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  .clearfix();
+}
+
+.panel-body-alert.info {
+  background-color: @white;
+  border-left: 1px solid @gray; 
+}
+
+.panel-body-alert.success {
+  background-color: @green-lighter;
+  border-left: 1px solid @green; 
+}
+
+.panel-body-alert.danger {
+  background-color: @red-lighter;
+  border-left: 1px solid @red; 
+}
+
+.panel-body-alert.ovd {
+  background-color: @white;
+  border-left: 1px solid @gray;
+  margin-left: 40px;
+}
+
+
+
+
+// Base styles
+// -------------------------
+
+.alert {
+  padding: 0px 0px 0px 10px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: @alert-border-radius;
+  position: relative;
+
+  // Headings for larger alerts
+  h4 {
+    margin-top: 0;
+    // Specified for the h4 to prevent conflicts of changing @headingsColor
+    color: inherit;
+  }
+  // Provide class for links that match alerts
+  .alert-link {
+    font-weight: @alert-link-font-weight;
+  }
+
+  // Improve alignment and spacing of inner content
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+  > p + p {
+    margin-top: 5px;
+  }
+}
+
+// Dismissable alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissable {
+ padding-right: 0px;
+
+  // Adjust close link position
+  .close {
+    position: relative;
+    top: 4px;
+    right: 5px;
+    color: inherit;
+  }
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.alert-success {
+  .alert-variant(@alert-success-bg; @alert-success-border; @alert-success-text);
+  h6 {
+    color: @green;
+    margin-bottom: 0px;
+  }
+  p, ul {
+    margin-bottom: 0px;
+  }
+}
+
+.alert-info {
+  .alert-variant(@alert-info-bg; @alert-info-border; @alert-info-text);
+  h6 {
+    color: @gray-dark;
+    margin-bottom: 0px;
+  }
+  p, ul {
+    margin-bottom: 0px;
+  }
+}
+
+
+.alert-ovd {
+  .alert-variant(@alert-info-bg; @alert-info-border; @alert-info-text);
+  h6 {
+    color: @gray-dark;
+    margin-bottom: 0px;
+  }
+  p, ul {
+    margin-bottom: 0px;
+  }
+}
+
+
+
+.alert-warning {
+  .alert-variant(@alert-warning-bg; @alert-warning-border; @alert-warning-text);
+}
+
+
+.alert-danger {
+  .alert-variant(@alert-danger-bg; @alert-danger-border; @alert-danger-text);
+  h6 {
+    color: @red;
+    margin-bottom: 0px;
+  }
+  p, ul {
+    margin-bottom: 0px;
+  }
+}

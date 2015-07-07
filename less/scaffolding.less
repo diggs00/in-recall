@@ -1,0 +1,88 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Reset the box-sizing
+
+*,
+*:before,
+*:after {
+  .box-sizing(border-box);
+}
+
+
+// Body reset
+
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+  background-color: @body-bg;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Reset unusual Firefox-on-Android default style.
+//
+// See https://github.com/necolas/normalize.css/issues/214
+
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+
+
+// Links
+
+a {
+  color: @link-color;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: none;
+  }
+
+  &:focus {
+    .tab-focus();
+  }
+}
+
+
+
+
+// Horizontal rules
+
+hr {
+  margin-top:    20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid @hr-border;
+}
+
+
+hr.light {
+  margin-top:    20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid @hr-border-light;
+}

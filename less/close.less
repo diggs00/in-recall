@@ -1,0 +1,80 @@
+//
+// Close icons
+// --------------------------------------------------
+
+
+.close {
+  float: right;
+  font-size: @font-size-base;
+  font-weight: @close-font-weight;
+  line-height: normal;
+  color: inherit;
+  text-shadow: none;
+  .opacity(1);
+
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    .opacity(1);
+  }
+
+  // Additional properties for button version
+  // iOS requires the button element instead of an anchor tag.
+  // If you want the anchor version, it requires `href="#"`.
+  button& {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+}
+
+
+//
+// Modal-Close icons
+// --------------------------------------------------
+
+
+.close-modal {
+  float: right;
+  font-size: @font-size-base;
+  font-weight: @close-font-weight;
+  line-height: 1;
+  color: inherit;
+  text-shadow: none;
+  margin-top: 3px;
+  font-size: 18px;
+  .opacity(1);
+  @media screen and (min-width: @screen-tablet) {
+    margin-top: 8px;
+    font-size: 22px;
+  }
+
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    .opacity(1);
+  }
+
+  // Additional properties for button version
+  // iOS requires the button element instead of an anchor tag.
+  // If you want the anchor version, it requires `href="#"`.
+  button& {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+}
+
+
+
+

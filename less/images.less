@@ -1,0 +1,50 @@
+// Images
+
+.banner-image {
+   margin-bottom: 30px;
+   padding: 30px 0px;
+   text-shadow: 0px 0px 5px #323334;
+   color: @white;
+   background-color: @jumbotron-bg;
+   height: 215px;
+   -webkit-background-size: cover !important;
+   -moz-background-size: cover !important;
+   -o-background-size: cover !important;
+   background-size: cover !important;
+   -webkit-box-shadow: inset 0px -5px 20px -5px #000;
+          box-shadow: inset 0px -5px 20px -5px #000;
+   @media (min-width: @screen-tablet) {
+    // padding: 0px;
+    height: 300px;
+   }
+   @media (min-width: @screen-desktop) {
+    // padding: 0px;
+    height: 350px;
+   }
+   h1 {
+     line-height: 1;
+     color: @white;
+      text-transform: uppercase;
+   }
+   p {
+      font-size:@font-size-large;
+   }
+}
+
+
+img {
+  vertical-align: middle;
+}
+
+// Responsive images (ensure images don't scale beyond their parents)
+.img-responsive {
+  .img-responsive();
+}
+
+
+// DB: added 8/14/2014
+.img-responsive-fullwidth {
+  display: block;
+  width: 100%;
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
