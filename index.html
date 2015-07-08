@@ -34,12 +34,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1>RECALL CENTER</h1>
-                    <p><a href="#">Back to the Chevrolet Complete Care</a>
+                    <p><a href="http://www.chevrolet.co.in/complete-care.html">Return to Chevrolet Complete Care </a>
                     </p>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
                 </div>
             </div>
         </div>
@@ -51,20 +47,11 @@
                 <div ng-switch on="vm.state">
                     <div ng-switch-when="">
                         <div class="col-xs-12">
-                            <h2>Message Title</h2>
+                            <h2>Chevrolet Voluntary Product Safety Recall Campaign</h2>
                         </div>
                         <div class="col-xs-12 col-md-8">
-                            <p>Message about Beat/Spark/Enjoy RKE recall. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis nostrud exercitation ullamco laboris.</p>
-
-                        </div>
-                    </div>
-
-                    <div ng-switch-when="submitted">
-                       <div class="col-xs-12">
-                           <h2>Thank You</h2>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                           <p>In order to avoid any inconvenience to you, we request you to please go through the below form and provide us with the necessary relevant information details to enable us to understand, if your vehicle is covered under this voluntary recall scheme.</p>
+                           <p>Post completion of the form you will receive an immediate response based on the information whether your vehicle is covered under this voluntary recall scheme or not. If a response is not received, please call our 24x7 helpline No: 180030008080 or email us at <a href="mailto:gmi.cac@gm.com">gmi.cac@gm.com</a>.</p>
                         </div>
                     </div>
 
@@ -72,10 +59,33 @@
                        <div class="col-xs-12">
                            <h2>Thank You</h2>
                         </div>
-                        <div class="col-xs-12 col-md-6">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                        <div class="col-xs-12 col-md-8">
+                            <p>We thank you for visiting us. Your vehicle is not applicable under this Product Safety Recall basis above information. However, in case you have any apprehension, we would request you to kindly visit your nearest dealership.</p>
+                            <a href="http://www.chevrolet.co.in/locate-a-car-dealer.html">Dealer Locator</a>
                         </div>
                     </div>
+
+                    <div ng-switch-when="submitted-noRemote">
+                       <div class="col-xs-12">
+                           <h2>Dear John</h2>
+                        </div>
+                        <div class="col-xs-12 col-md-8">
+                           <p>We thank you for visiting us. Your vehicle is not applicable under this Product Safety Recall basis above information. However, in case you have any apprehension, we would request you to kindly visit your nearest dealership.</p>
+                           <p><a href="http://www.chevrolet.co.in/locate-a-car-dealer.html">Dealer Locator</a></p>
+                           <p>A confirmation email has been sent to you, with a token of our appreciation for your time.</p>
+                        </div>
+                    </div>
+
+                    <div ng-switch-when="submitted">
+                       <div class="col-xs-12">
+                           <h2>Dear John Doe</h2>
+                        </div>
+                        <div class="col-xs-12 col-md-8">
+                           <p>Thank you for sharing the details. The reference number for your submission is ########. We are advising (dealershipship name) to be in touch with you to schedule an appointment.You may also contact them directly on XXXXXXX to fix an appointment if preferred, or you may reach us through our 24x7 helpline No: 180030008080 or email us at <a href="mailto:gmi.cac@gm.com">gmi.cac@gm.com</a>.</p>
+                           <p>A confirmation email has been sent to you, with a token of our appreciation for your time.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -114,7 +124,9 @@
                 <!-- QUESTION 2 -->
                 <div class="row margin-top-medium" ng-show="vm.questions.q1 === 'true'">
                     <div class="col-xs-12">
-                        <label>Is your vehicle registered between 2007 to 2014</label>
+                        <label class="margin-bottom-none">Is your vehicle manufactured between 2007 to 2014?</label>
+                        <p><a href="#" data-toggle="modal" data-toggle="modal" data-target="#q1Modal">What is this?</a>
+
                         <div class="row">
                             <div class="col-xs-12">
                                 <ul class="radio-list margin-bottom-none">
@@ -159,7 +171,7 @@
 
                     <div class="row">
                         <div class="col-xs-12 col-md-4">
-                            <label>Phone Number</label>
+                            <label>Mobile</label>
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="">
                             </div>
@@ -174,8 +186,23 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-xs-12 col-md-8">
+                        <div class="col-xs-12 col-md-4">
                             <label>City</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <label>State</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-md-8">
+                            <label>Address</label>
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="">
                             </div>
@@ -185,8 +212,8 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-4">
                             <div class="form-link-right">
-                                <label>License Plate Number</label>
-                                <p><a href="#" data-toggle="modal" data-toggle="modal" data-target="#myModal">What is this?</a>
+                                <label>Reg. No</label>
+                                <p><a href="#" data-toggle="modal" data-toggle="modal" data-target="#regModal">What is this?</a>
                                 </p>
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="">
@@ -196,8 +223,8 @@
 
                         <div class="col-xs-12 col-md-4">
                             <div class="form-link-right">
-                                <label>VIN Number</label>
-                                <p><a href="#" data-toggle="modal" data-toggle="modal" data-target="#myModal">What is this?</a>
+                                <label>VIN (Chassis No.)</label>
+                                <p><a href="#" data-toggle="modal" data-toggle="modal" data-target="#vinModal">What is this?</a>
                                 </p>
                             </div>
                             <div class="form-group">
@@ -210,7 +237,8 @@
                 <!-- QUESTION 3 -->
                 <div class="row margin-top-small" ng-show="vm.profile.vin">
                     <div class="col-xs-12">
-                        <label>Does your vehicle have Remote keyless entry system installed?</label>
+                        <label class="margin-bottom-none">Does your vehicle have Remote keyless entry system installed?</label>
+                        <p><a href="#" data-toggle="modal" data-toggle="modal" data-target="#remoteModal">What is this?</a>
                         <div class="row">
                             <div class="col-xs-12">
                                 <ul class="radio-list margin-bottom-none">
@@ -241,7 +269,8 @@
                 <!-- QUESTION 4 -->
                 <div class="row margin-top-medium" ng-show="vm.questions.q3 === 'true'">
                     <div class="col-xs-12">
-                        <label>Was the installation done by GM authorized dealership?</label>
+                        <label class="margin-bottom-none">Is it a GM genuine accessory?</label>
+                        <p><a href="#" data-toggle="modal" data-toggle="modal" data-target="#gmaccessoryModal">What is this?</a>
                         <div class="row">
                             <div class="col-xs-12">
                                 <ul class="radio-list margin-bottom-none">
@@ -272,13 +301,15 @@
                 <!-- SELECT DEALER -->
                 <div class="row margin-top-medium" ng-show="vm.questions.q4 === 'true'">
                     <div class="col-xs-12 col-md-4">
-                        <label>Select your dealer</label>
+                        <label>Please select the nearest dealership name:</label>
+                        <p class="input-error">Sorry, we could not find a dealer in your area.</p>
                         <div class="form-group">
-                            <select name="Dealer">
-                                <option value="">Select Dealer</option>
-                                <option value="AL">Option 1</option>
-                                <option value="AK">Option 2</option>
-                            </select>
+                           <select name="Dealer">
+                              <option value="">Select Dealer</option>
+                              <option value="AL">Dealer Name - City - 123.555.5555</option>
+                              <option value="AK">Dealer Name - City - 123.555.5555</option>
+                              <option value="AK">Dealer Name - City - 123.555.5555</option>
+                           </select>
                         </div>
                     </div>
                 </div>
@@ -290,11 +321,11 @@
                             <ul class="checkbox-list margin-bottom-none">
                                 <li>
                                     <label>
-                                        <span class="checkbox">
-                              <input type="checkbox" name="foo" value="true" ng-model="vm.tac">
-                              <span class="checkbox-value" aria-hidden="true"></span>
-                                        </span>
-                                        <p>Accept Terms and Condtions lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                       <span class="checkbox">
+                                       <input type="checkbox" name="foo" value="true" ng-model="vm.tac">
+                                       <span class="checkbox-value" aria-hidden="true"></span>
+                                       </span>
+                                       <p>I authorize Chevrolet and its partners to call/ email/ SMS me in order to assist me with my enquiry. By consenting & sharing my contact details, I hereby confirm that all of my contact information is correct, and I agree to receive such and any other marketing & product related communication from Chevrolet and its partners until specified otherwise, by me.</p>
                                     </label>
                                 </li>
                             </ul>
@@ -312,44 +343,197 @@
         </div>
     </section>
 
-    <!-- <section>
-        <div class="container">
-
-            <div class="row margin-bottom-small">
-                <div class="col-xs-12">
-                    <h2>Frequently Asked Questions</h2>
-                </div>
+   <section class="margin-bottom-xl">
+      <div class="container">
+         <div class="row margin-bottom-small">
+            <div class="col-xs-12">
+               <h2>Frequently Asked Questions</h2>
             </div>
+         </div>
 
 
-            <div class="row">
-                <div class="col-xs-12">
+         <div class="row">
+            <div class="col-xs-12">
+               <ul class="faq">
+                  <li>
+                     <h3>Q: Why is my Chevrolet Spark/ Beat/ Enjoy being recalled?</h3>
+                     <p>A: At Chevrolet Sales India Pvt. Ltd (Chevrolet), we give utmost priority to product quality and customer safety & satisfaction. During our ongoing internal evaluation processes and routine quality checks, we’ve identified a need to inspect the GM approved Remote Keyless Entry Installation system (RKE System)  in certain Chevrolet vehicles manufactured between 2007 - 2014 (For Enjoy 2013 & 2014 only) and repair the installation, if required on free of charge basis.</p>
+                  </li>
+                  <li>
+                     <h3>Q: Why is this Campaign conducted?</h3>
+                     <p>A: GM India has been made aware of a situation where a RKE System was installed incorrectly on 2007-2014 Chevrolet Spark, Beat and Enjoy models.  This in some very isolated cases can prompt sparks resulting in potential damage.</p>
+                  </li>
+                  <li>
+                     <h3>Q: Is it safe to drive my Chevrolet Spark/Beat/Enjoy?</h3>
+                     <p>A: Yes.  Safety is our first priority.  The Chevrolet Spark, Beat and Enjoy RKE System meets all the relevant regulatory standards but if the engine gets warm and the indicator light turns on, drivers should pull over and allow the engine to cool to restore normalcy).</p>
+                  </li>
+                  <li>
+                     <h3>Q: Will these repairs affect the performance of my Chevrolet Vehicle?</h3>
+                     <p>A: Not at all. The repairs shall have no effect on the vehicle performance.</p>
+                  </li>
+                  <li>
+                     <h3>Q: When will I get my Spark/Beat/Enjoy back post repairs? Will you collect it? Who will deliver it back?</h3>
+                     <p>A: The inspection and recommended repairs shall take approximately 1 hours’ time. Therefore, the customers are requested to take their vehicles to their nearest Chevrolet dealership for inspection and repair free of charge with a prior appointment.  A service support team (comprising of Dealer Service Manger & Dealer CRM) has been put in place. They will also contact customers to schedule an appointment for the required repairs.</p>
+                  </li>
+                  <li>
+                     <h3>Q: What all will you repair in the Vehicle / kind of repairs that would be carried out?</h3>
+                     <p>A: Chevrolet has developed a solution after carrying out required engineering validations. We shall inspect the GM approved Remote Keyless Entry (RKE) Installation system in Chevrolet vehicles and repair the RKE installation, if required.</p>
+                  </li>
+                  <li>
+                     <h3>Q: What will be the expense?</h3>
+                     <p>A: It would be carried out free of charge by our local Chevrolet Authorized dealer.</p>
+                  </li>
+                  <li>
+                     <h3>Q: My Chevrolet Spark/Beat/Enjoy has been giving certain other problems. Is it due to the same issue? Will I be compensated?</h3>
+                     <p>A: No, this issue is specific to the RKE System and has no bearing on the other concerns reported by you. In this campaign, only installation of RKE system will be repaired free of charge, if required. If your car is presenting some problems, you should simply stop by one of our authorized dealers and get it repaired. Our teams are dedicated to serving our customers efficiently and quickly.</p>
+                  </li>
+                  <li>
+                     <h3>Q: I am/ my friend is planning to buy a Chevrolet Spark/Beat/Enjoy, will this problem be fixed before purchase?</h3>
+                     <p>A: Yes. You can go ahead with your purchase. This recall has no bearing on 2015 onwards vehicles.</p>
+                  </li>
+                  <li>
+                     <h3>Q: My vehicle is fitted with Remote Keyless Entry system from after market, will this also be covered under the recall?</h3>
+                     <p>A: Chevrolet always insists on usage of GM approved accessories so that the customers are provided with such after sales services. Chevrolet neither recommends usage of any non GM approved outside fitment in the vehicles nor does it approve tampering of electrical connections. If your Vehicle is fitted with non GM approved RKE system fitted from after market, it is not covered under this recall scheme. Note: For these set of customer's dealership to share customer & Vehicle details with GMI over mail @ gmi.cac@gm.com separately.</p>
+                  </li>
+                  <li>
+                     <h3>Q: I have been sold a wrong product. I should be either given a replacement or compensation for the damages.</h3>
+                     <p>A: This issue is specific to the Remote Keyless Entry system and has no bearing on the other parts of the vehicle. Your Chevrolet is a good and safe car. As safety is our No.1 concern, we will repair the RKE System free of charge.</p>
+                  </li>
+               </ul>
 
-                </div>
             </div>
+         </div>
 
-        </div>
-    </section> -->
+      </div>
+   </section>
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
-                    <h2 class="modal-title" id="myModalLabel">Modal Title</h2>
-                </div>
-
-                <div class="modal-body">
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn-default" data-dismiss="modal">Close</button>
-                </div>
+   <!-- q1 Modal -->
+   <div class="modal fade" id="q1Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+               <h2 class="modal-title" id="myModalLabel">Manufacture Date</h2>
             </div>
-        </div>
-    </div>
+            <div class="modal-body">
+               <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                     <p>It can be found on vehicle Registration Certificate (RC).</p>
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                     <img class="img-responsive-fullwidth" src="img/q1.jpg" />
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn-default" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+         </div>
+      </div>
+   </div>
 
+
+   <!-- Reg. No Modal -->
+   <div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+               <h2 class="modal-title" id="myModalLabel">Vehicle Registration Number</h2>
+            </div>
+            <div class="modal-body">
+               <div class="row">
+                  <div class="col-xs-12">
+                     <p>This is your vehicle registration no. For example: HR55 AB1234</p>
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn-default" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- VIN Modal -->
+   <div class="modal fade" id="vinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+               <h2 class="modal-title" id="myModalLabel">VIN Chassis Number</h2>
+            </div>
+            <div class="modal-body">
+               <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                     <p>17 digit alphanumeric value on vehicle Registration Certificate (RC). Please refer to the image.</p>
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                     <img class="img-responsive-fullwidth" src="img/reg.jpg" />
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn-default" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Remote Modal -->
+   <div class="modal fade" id="remoteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+               <h2 class="modal-title" id="myModalLabel">Remote Keyless Entry</h2>
+            </div>
+            <div class="modal-body">
+               <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                     <p>Remote Keyless Entry example</p>
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                     <img class="img-responsive-fullwidth" src="img/remote.jpg" />
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn-default" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- GM Accessory Modal -->
+   <div class="modal fade" id="gmaccessoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+               <h2 class="modal-title" id="myModalLabel">GM Genuine Accessory</h2>
+            </div>
+            <div class="modal-body">
+               <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                     <p>GM Genuine Accessory example</p>
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                     <img class="img-responsive-fullwidth" src="img/gm-accessory.jpg" />
+                  </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn-default" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+         </div>
+      </div>
+   </div>
 
 </body>
 

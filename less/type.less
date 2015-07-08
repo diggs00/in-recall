@@ -83,7 +83,7 @@ h2 {
 }
 
 h3{
-  font-family: @headings-font-family-chevy2;
+  font-family: @font-family-base;
 }
 
 h4{
@@ -91,7 +91,7 @@ h4{
 }
 
 h3, h4 {
-  font-weight: normal;
+  font-weight: bold;
   line-height: @headings-line-height;
   color: @gray-darker;
 }
@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6  {
 
 h1, .h1 { font-size: 32px; }
 h2, .h2 { font-size: 28px;  }
-h3, .h3 { font-size: floor(@font-size-base * 1.54); } // 20px
+h3, .h3 { font-size: 14px;  }
 h4, .h4 { font-size: floor(@font-size-base * 1.39); } // 18px
 h5, .h5 { font-size: floor(@font-size-base * 1.25); } // 16px
 h6, .h6 { font-size: floor(@font-size-base * 1.25); } // 16px
@@ -184,18 +184,14 @@ ol {
    padding-left: 15px;
 }
 
-// DB: Styled list with image left text right
-ul.image-list {
+
+ul.faq {
    margin:0px;
    li {
-      display: block;
-      overflow: hidden;
+      margin-bottom: 20px;
    }
-   img {
-      float: left;
-   }
-   p {
-      margin: 0px 0px 0px 64px;
+   li:last-child {
+      margin-bottom: 0px;
    }
 }
 
@@ -203,14 +199,6 @@ ul.image-list {
 
 
 
-
-
-// db: list inline with pipe IE fix
-* html .list-inline-pipe li {
-  border-left: 1px solid black;
-  padding: 0 0.4em 0 0.4em;
-  margin: 0 0.4em 0 -0.4em;
-}
 
 
 
